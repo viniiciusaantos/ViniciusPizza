@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Contato - Vinicius Pizzaria</title>
+    </head>
+    <body>
+        <header>
+            <section id="banner">
+                <div id="logo">
+                    <h1>
+                        <figure>
+                            <img src="img/contato.PNG" alt="Contato - Vinicius Pizzaria"/>
+                        </figure>
+                    </h1>
+                </div>
+                <div id="login">
+                    <form action="php/validaLogin.php" method="POST">
+                        <label>Login</label>
+                        <input name="loginUsuario" type="email" placeholder="Insira o email do usuário"/>
+                        <label>Senha</label>
+                        <input name="senhaUsuario" type="password" placeholder="Insira a senha do usuário"/>
+                        <input type="submit" value="Entrar"/>
+                        <p><a href="criarConta.html">Criar conta</a></p>
+                    </form>
+                </div>    
+            </section>
+            <section>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="">Sabores</a></li>
+                            <li><a href="">Pedidos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>  
+            </section>   
+        </header>
+        <main id="mainContato">
+            <div>
+                <h2>Mande-nos uma mensagem!</h2>
+            </div>
+            <div>
+                <form id="formContato" method="POST" action="php/mensagemContato.php">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input name="clienteNome" type="text" placeholder="Insira o seu nome"/>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input name="clienteTelefone" type="tel" placeholder="Insira o seu telefone"/>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input name="clienteEmail" type="email" placeholder="Insira o seu email"/>
+                    </div>
+                    <div>
+                        <label id="tipo">O que deseja nos dizer?</label>
+                        <select>
+                            <option>Dúvidas</option>
+                            <option>Elogios</option>
+                            <option>Reclamações</option>
+                            <option>Sugestões</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="mensagem">Escreva a sua mensagem</label>
+                        <textarea name="mensagem" type="text"></textarea>
+                        <input name="enviarMensagem" type="submit" value="Enviar mensagem">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

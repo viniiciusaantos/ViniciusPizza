@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Criar conta - Vinicius Pizza</title>
+    </head>
+    <body>
+        <header>
+            <section id="banner">
+                <div id="logo">
+                    <h1>
+                        <figure>
+                            <img src="img/contato.PNG" alt="Contato - Vinicius Pizzaria"/>
+                        </figure>
+                    </h1>
+                </div>
+                <div id="login">
+                    <form action="php/validaLogin.php" method="POST">
+                        <label>Login</label>
+                        <input name="loginUsuario" type="email" placeholder="Insira o email do usuário"/>
+                        <label>Senha</label>
+                        <input name="senhaUsuario" type="password" placeholder="Insira a senha do usuário"/>
+                        <input type="submit" value="Entrar"/>
+                        <p><a href="criarConta.html">Criar conta</a></p>
+                    </form>
+                </div>    
+            </section>
+            <section>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="">Sabores</a></li>
+                            <li><a href="">Pedidos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>  
+            </section>   
+        </header>
+        <form method="POST" action="php/dadosCliente.php">
+            <fieldset>
+                <legend>Conta</legend>
+                <div>
+                    <label>Email</label>
+                    <input name="emailUsuario" type="email" placeholder="Ex.: joao@email.com" required/>
+                </div>
+                <div>
+                    <label>Senha</label>
+                    <input name="senhaUsuario" type="password" placeholder="Insira a sua senha" minlength="8" maxlength="16" required/>
+                </div>
+                <div>
+                    <label>Repita a senha</label>
+                    <input name="verificacaoSenhaUsuario" type="password" placeholder="Repita a senha" minlength="8" maxlength="16" required/>
+                </div>            
+            </fieldset>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label>Nome</label>
+                    <input name="nomeUsuario" type="text" placeholder="Ex.: João da Silva"/>
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input name="telefoneUsuario" type="tel" placeholder="Ex.: (27) 99999-9999"/>
+                </div>
+                <div>
+                    <label>Data de nascimento</label>
+                    <input name="dataNascimento" type="date" placeholder="Ex.: 01/01/1990"/>
+                </div>
+                <div>
+                    <label>Sexo</label>
+                    <input name="sexoUsuario" type="radio" value="masculino" checked/>
+                    <label>Masculino</label>
+                    <input name="sexoUsuario" type="radio" value="feminino"/>
+                    <label>Feminino</label>
+                </div>
+                <div>
+                    <label>Insira uma foto</label>
+                    <input name="fotoUsuario" type="file" accept="image/*"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <div>
+                    <label>Endereço</label>
+                    <input name="enderecoUsuario" type="text" placeholder="Ex.: Rua Principal"/>
+                </div>
+                <div>
+                    <label>Número</label>
+                    <input name="numeroEnderecoUsuario" type="number" min="1" max="9999" placeholder="Ex.: 10"/>
+                </div>
+                <div>
+                    <label>Complemento</label>
+                    <input name="complementoEnderecoUsuario" type="text" placeholder="Ex.: Casa, Apartamento 301, etc."/>
+                </div>
+                <div>
+                    <label>Bairro</label>
+                    <input name="bairroUsuario" type="text" placeholder="Ex.: Centro"/>
+                </div>
+                <div>
+                    <label>Cidade</label>
+                    <select name="cidadeUsuario">
+                        <option value="Vitória">Vitória</option>
+                        <option value="Vila Velha">Vila Velha</option>
+                        <option value="Cariacica">Cariacica</option>
+                        <option value="Serra">Serra</option>
+                        <option value="Viana">Viana</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Publicidade</legend>
+                <div>
+                    <label>Como nos conheçeu?</label>
+                    <textarea name="comoConheceu" maxlength="256" placeholder="Ex.: Conheci através de amigos, aplicativos, google, etc."></textarea>
+                </div>
+                <div>
+                    <input id="receberAnuncio" name="receberAnucio" type="checkbox" checked/>
+                    <label for="receberAnuncio">Desejo receber anúncios</label>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar dados"/>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html> 

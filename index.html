@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Vinicius Pizzaria</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <header>
+            <section id="banner">
+                <div id="logo">
+                    <h1>
+                        <figure>
+                            <img src="img/viniciusPizza.PNG" alt="Vinicius Pizzaria"/>
+                        </figure>
+                    </h1>
+                </div>
+                <div id="login">
+                    <form action="php/validaLogin.php" method="POST">
+                        <label>Login</label>
+                        <input name="loginUsuario" type="email" placeholder="Insira o email do usuário"/>
+                        <label>Senha</label>
+                        <input name="senhaUsuario" type="password" placeholder="Insira a senha do usuário"/>
+                        <input type="submit" value="Entrar"/>
+                        <p><a href="criarConta.html">Criar conta</a></p>
+                    </form>
+                </div>    
+            </section>
+            <section>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="">Sabores</a></li>
+                            <li><a href="">Pedidos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>  
+            </section>   
+        </header>
+        <main>
+            <section id="principaisSabores">
+                <div>
+                    <h2><a href="#tabPrincipaisSabores">Conheça os nossos principais sabores de pizzas</a></h2>
+                </div>
+                <div>
+                    <table id="tabPrincipaisSabores">
+                        <thead>
+                            <tr>
+                                <th>Sabor</th>
+                                <th>Carne</th>
+                                <th>Salada</th>
+                                <th>Calabresa</th>
+                                <th>Queijo e molho</th>
+                                <th>Champignon e azeite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mussarela</td>
+                                <td class="negativo">Não</td>
+                                <td class="negativo">Não</td>
+                                <td class="positivo">Sim</td>
+                                <td class="positivo">Sim</td>
+                                <td class="negativo">Não</td>
+                            </tr>
+                            <tr>
+                                <td>Frango</td>
+                                <td class="positivo">Peito de Frango desfiado</td>
+                                <td class="negativo">Não</td>
+                                <td class="negativo">Não</td>
+                                <td class="positivo">Sim</td>
+                                <td class="negativo">Não</td>
+                            </tr>
+                            <tr>
+                                <td>Champignon</td>
+                                <td class="positivo">Boi desfiado</td>
+                                <td class="positivo">Sim</td>
+                                <td class="negativo">Não</td>
+                                <td class="negativo">Não</td>
+                                <td class="positivo">Sim</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <div id="copyright">
+            <a href="#" id="logoFooter">
+                <img src="img/viniciusPizza.PNG" alt="Vinicius Pizza"/>
+            </a>
+            <p>Criado por Vinicius Santos em agosto de 2019 com auxílio do curso da DevMedia&copy</p>
+        </div>
+    </footer>
+</html>
